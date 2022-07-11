@@ -1,0 +1,28 @@
+
+Aplicativo para Android escrito em Java para ouvir músicas da Web via stream de rádios
+
+Adicionei algumas estações de rádio inicialmente, novas estações podem ser incluidas ou excluidas.
+
+Alguma estação ao ser selecionada, pode demorar bastante para iniciar a música. Isso não depende do app e sim da rádio.
+
+Versão do Android Studio Chipmunk | 2021.2.1 Patch 1
+Não tem dependência e o SDK usado foi o 32.
+
+Breve descrição do App WebRadio
+
+- Esse aplicativo faz uso de um Serviço em Background no Android. No manifest uso a permisão "android.permission.WAKE_LOCK" para manter o aparelho sempre ativo.
+- Se estiver ouvindo uma estação e uma chamada de telefone aparecer, o app coloca a música em "pause" assim que a ligação for atendida e em "play" assim que a ligação for desligada.
+- Uso o SQLite para guardar as estações de rádio, e já coloco algumas estações no banco de dados.
+- Faço uso do "HttpURLConnection" para verificar se o endereço da URL da estação está ativa e online. O MediaPlayer não consegue tratar o erro se a URL não estiver online.
+- Faço uso do "LocalBroadcast" para enviar dados do "Serviço" para o "MainActivity"
+  OBS - O app tem duas fase de trabalho:
+      1ª - Quando voçê está dentro do app. Aqui o "LocalBroadcast" está ativo e enviando dados do serviço para "MainActivity"
+      2ª - Quando sai do app e continua ouvindo música (o serviço "Background" fica em atividade) o "LocalBroadcast" fica desativado.
+
+  Este app está no Google Play no endereço abaixo
+  https://play.google.com/store/apps/details?id=br.com.marcaobonadiman.webradio2db
+
+  Qualquer dúvida, entre em contato: marcaobonadiman@gmail.com
+			
+			
+			
