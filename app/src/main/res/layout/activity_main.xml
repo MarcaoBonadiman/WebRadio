@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/purple_200"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTit"
+        android:text=""
+        android:layout_marginTop="10dip"
+        android:textColor="@android:color/holo_green_dark"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewEstacao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="10dip"
+        android:textColor="@android:color/holo_orange_dark"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:background="@drawable/gradient"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        >
+
+        <ImageButton
+            android:id="@+id/ibtnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_baseline_play_circle_outline_24"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/ic_baseline_stop_24"
+            android:id="@+id/ibtnStop"
+            android:background="@null"
+            />
+
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            android:id="@+id/ibtnAdd"
+            android:layout_marginStart="30dp"
+            android:background="@null"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/ic_baseline_edit_24"
+            android:id="@+id/ibtnEdit"
+            android:background="@null"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+            android:id="@+id/ibtnDelete"
+            android:background="@null"
+            />
+
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/ic_baseline_access_time_24"
+            android:id="@+id/ibtnSleep"
+            android:background="@null"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/ic_baseline_power_settings_new_24"
+            android:id="@+id/ibtnPower"
+            android:background="@null"
+            />
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:background="@drawable/gradient"
+        android:layout_marginTop="15dp"
+        android:layout_height="1dp"
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout android:id="@+id/linearLayoutButtons"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Aqui vão ficar os botões das estações (Gerado programaticamente)-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

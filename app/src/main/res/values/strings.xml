@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WebRádio</string>
+    <string name="station_new_edit_delete">Station New/Edit/Delete</string>
+    <string name="station_name">Station name</string>
+    <string name="url">URL</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="off">Off</string>
+    <string name="connecting">Connecting</string>
+    <string name="select_radio">"Select a Station"</string>
+    <string name="off_the_air">"webradio off the air"</string>
+    <string name="permission_required">"Permission required"</string>
+
+</resources>
