@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
+        MyService.mainActivityIsActive = true;
         // Ligo a comunicação do Serviço com o MainActivity
         try {
             LocalBroadcastManager.getInstance(this).registerReceiver(myReceiver, new IntentFilter(mBroadcast));
@@ -202,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onStop() {
         super.onStop();
+        MyService.mainActivityIsActive = false;
         Sair();
     }
 

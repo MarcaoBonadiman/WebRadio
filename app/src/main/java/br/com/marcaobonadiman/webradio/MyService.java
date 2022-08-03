@@ -20,6 +20,7 @@ import java.io.IOException;
 
 public class MyService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener {
 
+    public static boolean mainActivityIsActive = false;
     private int autoPlay = 0;
     private int sleep = 0;
     private int tempoDecorrido = 0;
@@ -69,6 +70,8 @@ public class MyService extends Service implements MediaPlayer.OnPreparedListener
     public int onStartCommand(Intent intent, int flags, int startId) {
         //Log.e("MyService", " onStartCommand");
         mediaPlayer = new MediaPlayer();
+        float vol=(float)(1.0);
+        mediaPlayer.setVolume(vol,vol);
         mediaPlayer.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
         mediaPlayer.setOnErrorListener(this);
         mediaPlayer.setOnPreparedListener(this);
@@ -147,6 +150,10 @@ public class MyService extends Service implements MediaPlayer.OnPreparedListener
                                         mediaPlayer.reset();
                                     }
                                     acao = 2; // PowerOff
+                                    if (!mainActivityIsActive){
+                                        System.exit(0);
+                                        android.os.Process.killProcess(android.os.Process.myPid());
+                                    }
                                     tempo = System.currentTimeMillis()+2000;
                                 }
                                 minuto = System.currentTimeMillis();
